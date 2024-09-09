@@ -1,9 +1,12 @@
 add_rules("mode.debug", "mode.release")
 
+add_requires("libsdl")
+
 target("sdl-proj")
     set_kind("binary")
     add_files("src/*.cpp")
-
+    set_toolchains("gcc")
+	add_packages("libsdl")
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
